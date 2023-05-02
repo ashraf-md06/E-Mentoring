@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ul {
+  position: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkgreen;
+}
+
+li {
+  float: center;
+  font-size:24px;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:lightgreen;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+body{
+background-color: lightgreen;
+}
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 2;
+  overflow-x: hidden;
+  padding-top: 20px;
+  
+}
+
+.left {
+  left: 0;
+  background-color: lightgreen;
+  border-right:10px;
+  
+}
+
+.right {
+  right: 0;
+  background-color: lightblue;
+
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+.centered1 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered1 img {
+  width: 150px;
+  border-radius: 50%;
+}
+.gfg {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.gfg:hover {background-color: #3e8e41}
+
+.gfg:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.gfg {
+        background-color: white;
+        border: 2px solid black;
+        color: green;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        margin: 10px 30px;
+        cursor: pointer;
+        }
+</style>
+</head>
+<body>
+<ul>
+  <li><a >E-MENTORING</a></li>
+  
+</ul>
+<div class="split left">
+  <div class="centered">
+    <img src="img/mentorlgn.png" alt="Avatar woman">
+	<br>
+	<br>
+     <a href="mentor.html"><button class = "gfg"  >
+            MENTOR        </button></a>
+  </div>
+  <div class="centered1">
+  <button class = "gfg" onclick="window.location.href = 'mentorsignup.html'">
+            signup       </button>
+	</div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+       <img src="img/menteelgn.png" alt="Avatar woman">
+	<br>
+	<br>
+     <button class = "gfg" type="submit">
+            MENTEE        </button>
+			</div>
+			<div class="centered1">
+			<button class = "gfg" onclick="window.location.href = 'menteesignup.html'">
+            signup       </button>
+  </div>
+</div>
+     
+</body>
+</html> 

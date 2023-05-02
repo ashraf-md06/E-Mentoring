@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+ul {
+  position: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkgreen;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:lightgreen;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+body{
+background-color: lightgreen;
+}
+.card {
+  box-shadow: 0 4px 8px 0 blue;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border-radius: 12px;
+
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+.btn{
+  border: curved;
+  border-radius: 12px;
+  padding: 4px;
+  color: white;
+  background-color: green;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 15px;
+
+}
+.btn1 {
+  border: none;
+  outline: 0;
+  padding: 8px;
+  color: white;
+  background-color: darkgreen;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+btn1:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="mentor.html">Home</a></li>
+  <li><a href="mymentees.html">My Mentees</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="mentorprofile.html">My Profile</a></li>
+</ul>
+<div class="bg">
+
+<h2 style="text-align:center">My Profile</h2>
+
+<div class="card">
+  <img src="img/mentorprofile.jpg" alt="John" style="width:100%">
+  <h1>Ram</h1>
+  <p class="title">Asst Professor,CSE</p>
+  <p>Kongu Engineering College</p>
+   <a href="mymentees.html"><button class="btn">No.Of Mentees : 20</button></a>
+
+  <div style="margin: 24px 0;">
+	<i class="fa fa-phone" style="font-size:24px;color:blue"></i>
+	<i class="fa fa-whatsapp" style="font-size:24px;color:green"></i>
+	<i class="fa fa-linkedin-square" style="font-size:24px;color:blue"></i>
+	
+  </div>
+  <p><button class="btn1">Contact</button></p>
+</div>
+</div>
+</body>
+</html>

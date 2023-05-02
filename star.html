@@ -1,0 +1,209 @@
+<html><head>
+<title>star</title>
+</head>
+<style>
+ul {
+  position: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkgreen;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:lightgreen;
+}
+body{
+background-color:lightgreen;}
+</style>
+<body>
+	<ul>
+  <li><a href="mentor.html">Home</a></li>
+  <li><a href="star.html">Star Calculation</a></li>
+  <li><a href="mymentees.html">My Mentees</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="mentorprofile.html">My Profile</a></li>
+</ul>
+
+    <p>Average in CAT&nbsp; <input type="number" name="one" id="one" value='10'></p>
+    <p>CGPA upto last semester<input type="number" name="two" id="two" value='10'></p>
+    <p>No of paper presentation<input type="number" name="three" id="three" value='4'></p>
+    <p> No of Project Presentation <input type="number" name="four" id="four" value='4'></p>
+    <p>No of Co & Extra Curricular Participation  <input type="number" name="five" id="five" value='4'></p>
+    <button onclick="Calculate()">Calculate average</button>
+    <button onclick="Clear()">Reset</button>
+    <h2 id="resultTitle" style="display:none">Average Stars: <span id="avg" style="font-weight:normal"></span></h2>
+    <p id="roundp" style="display:none">Rounded Average = <span id="round" style="color:goldenrod;"></span></p>
+<script>
+  
+  function Calculate(){
+
+  var oneStar = parseInt(+document.getElementById('one').value);
+  var twoStar = parseInt(+document.getElementById('two').value);
+  var threeStar = parseInt(+document.getElementById('three').value); 
+  var fourStar = parseInt(+document.getElementById('four').value);
+  var fiveStar = parseInt(+document.getElementById('five').value);
+	if(oneStar>=10)
+	{
+	  var oneTotal = 1;
+	}
+	else if(oneStar==9)
+	{
+		var oneTotal = 1;
+
+	}
+	else if(oneStar==8)
+	{
+		var oneTotal = 0.8;
+
+	}
+	else if(oneStar==7)
+	{
+		var oneTotal = 0.4;
+
+	}
+	else 
+	{
+		var oneTotal = 0.2;
+
+	}
+	if(twoStar>=10)
+	{
+	  var twoTotal = 1;
+	}
+	else if(twoStar==9)
+	{
+	  var twoTotal = 0.8;
+	}
+	else if(twoStar==8)
+	{
+	  var twoTotal = 0.6;
+	}
+	else if(twoStar==7)
+	{
+	  var twoTotal = 0.4;
+	}
+	else
+	{
+		var twoTotal = 0.2;
+
+	}
+	
+	if(threeStar>=4)
+	{
+	  var threeTotal = 1;
+	}
+	else if(threeStar==3)
+	{
+	  var threeTotal = 0.8;
+	}
+	else if(threeStar==2)
+	{
+	  var threeTotal = 0.7;
+	}
+	else if(threeStar==1)
+	{
+	  var threeTotal = 0.4;
+	}
+	else
+	{
+		var threeTotal = 0;
+	}
+	
+	if(fourStar>=4)
+	{
+	  var fourTotal = 1;
+	}
+	else if(fourStar==3)
+	{
+	  var fourTotal = 0.8;
+	}
+	else if(fourStar==2)
+	{
+	  var fourTotal = 0.7;
+	}
+	else if(fourStar==1)
+	{
+	  var fourTotal = 0.4;
+	}
+	
+	else
+	{
+		var threeTotal = 0;
+	}
+	
+	if(fiveStar>=4)
+	{
+	  var fiveTotal = 1;
+	}
+	else if(fiveStar==3)
+	{
+	  var fiveTotal = 0.8;
+	}
+	else if(fiveStar==2)
+	{
+	  var fiveTotal = 0.6;
+	}
+	else if(fiveStar==1)
+	{
+	  var fiveTotal = 0.4;
+	}
+	else
+	{
+		var fiveTotal = 0;
+
+	}
+	//else
+	
+		
+	
+
+  var totalClicks = (oneStar + twoStar + threeStar + fourStar + fiveStar);
+  var totalStars = (oneTotal + twoTotal + threeTotal + fourTotal + fiveTotal);
+  var avgStars = totalStars;
+  
+  avgStars = avgStars.toPrecision(3);
+  
+  if(avgStars.toString().split(".")[1]==0)
+    avgStars = Number(avgStars).toPrecision(2);
+
+  var stars = '&#9733;';
+  document.getElementById('resultTitle').style.display = 'block';
+  document.getElementById('roundp').style.display = 'block';
+  document.getElementById('avg').innerHTML = avgStars;
+  
+  for(var i = 0 ;i<(Math.round(avgStars))-1;i++)
+  {
+    stars=stars+' &#9733;';
+  }
+  document.getElementById('round').innerHTML = stars;
+}
+
+function Clear(){
+  document.getElementById('one').value=10;
+  document.getElementById('two').value=10;
+  document.getElementById('three').value=4;
+  document.getElementById('four').value=4;
+  document.getElementById('five').value=4;
+  document.getElementById('avg').innerHTML = "";
+  document.getElementById('round').innerHTML = "";
+  document.getElementById('resultTitle').style.display = 'none';
+  document.getElementById('roundp').style.display = 'none';
+}
+</script>
+</body>
+</html>
